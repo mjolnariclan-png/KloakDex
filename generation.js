@@ -266,7 +266,7 @@ const pokedexData = {
     255: {name: "Torchic",type: "Fire",image:"https://file.garden/aS1L6O6dLxrEurHB/Pokedex/sprites/Normal/torchic.png"},
     256: {name: "Combusken",type: "Fire · Fighting",image:"https://file.garden/aS1L6O6dLxrEurHB/Pokedex/sprites/Normal/combusken.png"},
     257: {name: "Blaziken",type: "Fire · Fighting",image:"https://file.garden/aS1L6O6dLxrEurHB/Pokedex/sprites/Normal/blaziken.png"},
-    258: {name: "Mudkip",type: "Water", image:"E:/Family/Pokedex/sprites/Normal/mudkip.png"},
+    258: {name: "Mudkip",type: "Water", image:"https://file.garden/aS1L6O6dLxrEurHB/Pokedex/sprites/Normal/mudkip.png"},
     259: {name: "Marshtomp",type: "Water · Ground",image:"https://file.garden/aS1L6O6dLxrEurHB/Pokedex/sprites/Normal/marshtomp.png"},
     260: {name: "Swampert",type: "Water · Ground",image:"https://file.garden/aS1L6O6dLxrEurHB/Pokedex/sprites/Normal/swampert.png"},
     261: {name: "Poochyena",type: "Dark",image:"https://file.garden/aS1L6O6dLxrEurHB/Pokedex/sprites/Normal/poochyena.png"},
@@ -1166,5 +1166,6 @@ function goBack() {
     document.getElementById('games-section').classList.add('hidden');
     document.getElementById('Generation-selection').classList.remove('hidden');
 }
+
 
 
