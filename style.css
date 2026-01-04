@@ -1,11 +1,11 @@
 @font-face {
     font-family: 'Pokemon Hollow';
-    src: url('F:/Family/Pokedex/Fonts/Pokemon Hollow.ttf') format('truetype');
+    src: url('https://file.garden/aS1L6O6dLxrEurHB/Pokedex/Fonts/Pokemon Hollow.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'Pokemon Solid';
-    src: url('F:/Family/Pokedex/Fonts/Pokemon Solid.ttf') format('truetype');
+    src: url('https://file.garden/aS1L6O6dLxrEurHB/Pokedex/Fonts/Pokemon Solid.ttf') format('truetype');
 }
 
 body {
@@ -13,7 +13,7 @@ body {
     font-family: 'Pokemon Hollow', Arial, sans-serif;
     font-size: 12px;
     color: #ffcc00;
-    background-image: url('F:/Family/Pokedex/Pokemon Logo.png');
+    background-image: url('https://file.garden/aS1L6O6dLxrEurHB/Pokedex/Pokemon Logo.png');
     background-size: cover;
     background-position: top;
     background-repeat: no-repeat;
@@ -58,3 +58,4 @@ button:hover {
         grid-template-columns: 1fr;
     }
 }
+
