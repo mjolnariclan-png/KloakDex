@@ -3,6 +3,7 @@ function generateRange(start, end) {
 }
 
 
+
 const pokedexData = {
     gen1: {
     1: { name: "bulbasaur", type: "Grass/Poison", image:"https://file.garden/aS1L6O6dLxrEurHB/Pokedex/sprites/Normal/Bulbasaur.png" },
@@ -1166,6 +1167,7 @@ function goBack() {
     document.getElementById('games-section').classList.add('hidden');
     document.getElementById('Generation-selection').classList.remove('hidden');
 }
+
 
 
 
