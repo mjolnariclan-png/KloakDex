@@ -1,7 +1,7 @@
 // Pokémon data for each game
 const pokedexData = {
     red: {
-    1: { name: "bulbasaur", type: "Grass/Poison", image:"F:/Family/Pokedex/sprites/RBY Dex/Bulbasaur.png" },
+    1: { name: "bulbasaur", type: "Grass/Poison", image:"https://file.garden/aS1L6O6dLxrEurHB/Pokedex/sprites/RBY%20Dex/Bulbasaur.png" },
     2: { name: "ivysaur", type: "Grass/Poison", image:"F:/Family/Pokedex/sprites/RBY Dex/Ivysaur.png" },
     3: { name: "venusaur", type: "Grass/Poison", image:"F:/Family/Pokedex/sprites/RBY Dex/Venusaur.png" },
     4: { name: "charmander", type: "Fire", image:"F:/Family/Pokedex/sprites/RBY Dex/Charmander.png" },
@@ -3512,4 +3512,5 @@ function GameSelect() {
 function goBack() {
     document.getElementById('game-selection').classList.remove('hidden');
     document.getElementById('dex-buttons').classList.remove('hidden');
+
 }
