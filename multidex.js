@@ -797,30 +797,24 @@ const pokedexData = {
 
 
 const gameData = {
-    kanto: [
-        { id: 1, name: "Pokémon Red", image:"images/games/kanto/Red.png",pokemon: generateRange(1, 151) },
-        { id: 2, name: "Pokémon Blue", image:"images/games/kanto/Blue.png", pokemon: generateRange(1, 151) }, // Example with Bulbasaur
-        { id: 3, name: "Pokémon Yellow", image:"images/games/kanto/Yellow.png", pokemon: generateRange(1, 151) },
-        { id: 4, name: "Pokémon Fire Red", image:"images/games/kanto/FireRed.png",pokemon: generateRange(1, 151) },
-        { id: 5, name: "Pokémon Leaf Green", image:"images/games/kanto/LeafGreen.png", pokemon: generateRange(1, 151) }, // Example with Bulbasaur
-        { id: 6, name: "Pokémon Lets Go Eevee", image:"images/games/kanto/LetsGoEevee.png", pokemon: generateRange(1, 151) },
-        { id: 7, name: "Pokémon Lets Go Pikachu", image:"images/games/kanto/LetsGoPikachu.png",pokemon: generateRange(1, 151) },
+    x: [
+        { id: 1, name: "Central Kalos", image:"images/games/kanto/Red.png",pokemon: generateRange(1, 151) },
+        { id: 2, name: "Coastal Kalos", image:"images/games/kanto/Blue.png", pokemon: generateRange(1, 151) }, // Example with Bulbasaur
+        { id: 3, name: "Mounain Kalos", image:"images/games/kanto/Yellow.png", pokemon: generateRange(1, 151) },
     ],
-    johto: [
-        { id: 1, name: "Pokémon Crystal", image:"images/games/jhoto/crystal.png",pokemon: generateRange(152, 251) },
-        { id: 2, name: "Pokémon Gold", image:"images/games/jhoto/Gold.png", pokemon: generateRange(152, 251) },
-        { id: 3, name: "Pokémon Heart Gold", image:"images/games/jhoto/HeartGold.png", pokemon: generateRange(152, 251) },
-        { id: 4, name: "Pokémon Silver", image:"images/games/jhoto/Silver.png", pokemon: generateRange(152, 251) },
-        { id: 5, name: "Pokémon Soul Silver", image:"images/games/jhoto/SoulSilver.png", pokemon: generateRange(152, 251) },
+    y: [
+        { id: 1, name: "Central Kalos", image:"images/games/kanto/Red.png",pokemon: generateRange(1, 151) },
+        { id: 2, name: "Coastal Kalos", image:"images/games/kanto/Blue.png", pokemon: generateRange(1, 151) }, // Example with Bulbasaur
+        { id: 3, name: "Mounain Kalos", image:"images/games/kanto/Yellow.png", pokemon: generateRange(1, 151) },
     ],
-    hoenn: [
+    sun: [
         { id: 1, name: "Pokémon Emerald", image:"images/games/hoenn/Emerald.png",pokemon: generateRange(252, 386) },
         { id: 2, name: "Pokémon Ruby", image:"images/games/hoenn/Ruby.png", pokemon: generateRange(252, 386) },
         { id: 3, name: "Pokémon Sapphire", image:"images/games/hoenn/Sapphire.png", pokemon: generateRange(252, 386) },
         { id: 4, name: "Pokémon Omega Ruby", image:"images/games/hoenn/OmegaRuby.png", pokemon: generateRange(252, 386) },
         { id: 5, name: "Pokémon Alpha Sapphire", image:"images/games/hoenn/AlphaSapphire.png", pokemon: generateRange(252, 386) },
     ],
-    sinnoh: [
+    ultrasun: [
         { id: 1, name: "Pokémon Arceus", image:"images/games/sinnoh/Arceus.png",pokemon: generateRange(387, 493) },
         { id: 2, name: "Pokémon Brilliant Diamond", image:"images/games/sinnoh/BrilliantDiamond.png", pokemon: generateRange(387, 493) },
         { id: 3, name: "Pokémon Diamond", image:"images/games/sinnoh/Diamond.png", pokemon: generateRange(387, 493) },
@@ -828,7 +822,7 @@ const gameData = {
         { id: 5, name: "Pokémon Pearl", image:"images/games/sinnoh/Pearl.png", pokemon: generateRange(387, 493) },
         { id: 6, name: "Pokémon Platinum", image:"images/games/sinnoh/Platinum.png", pokemon: generateRange(387, 493) },
     ],
-    unova: [
+    moon: [
         { id: 1, name: "Pokémon Black", image:"images/games/unova/Black.png",pokemon: generateRange(387, 493) },
         { id: 2, name: "Pokémon Brilliant Diamond", image:"images/games/sinnoh/BrilliantDiamond.png", pokemon: generateRange(387, 493) },
         { id: 3, name: "Pokémon Diamond", image:"images/games/sinnoh/Diamond.png", pokemon: generateRange(387, 493) },
