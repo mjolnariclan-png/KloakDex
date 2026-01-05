@@ -3494,6 +3494,7 @@ function toggleDetails(game, number, pokemonBox) {
 }
 
 
+
 function toggleCaughtStatus(game, number) {
     const isCaught = localStorage.getItem(`${game}-${number}`) === 'true';
 
