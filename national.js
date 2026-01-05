@@ -3437,122 +3437,72 @@ const pokedexData = {
     // Add other games here
 };
 
-
-function capitalize(str) {
-    return str.charAt(0).toUpperCase() + str.slice(1);
-}
-
-// Example structure: nationalData points to your external dex objects
-const nationalData = {
-    "x": {
-        name: "Pokémon X",
-        dexes: { XYFull: pearl, XYCentral: diamond, XYCoast: red, XYMount: blue },
-        images: { 
-            XYFull: "images/games/kalos/X.png",
-            XYCentral: "images/games/kalos/central.png",
-            XYCoast: "images/games/kalos/coastal.png",
-            XYMount: "images/games/kalos/mountain.png"
-        }
-    },
-    "y": {
-        name: "Pokémon Y",
-        dexes: { XYFull: pearl, XYCentral: diamond, XYCoast: red, XYMount: blue },
-        images: { 
-            XYFull: "images/games/kalos/Y.png",
-            XYCentral: "images/games/kalos/central.png",
-            XYCoast: "images/games/kalos/coastal.png",
-            XYMount: "images/games/kalos/mountain.png"
-        }
-    },
-    "pokemon-red": {
-        name: "Pokémon Red",
-        dexes: { RedNormal: Red }, // Only 1 dex
-        images: { RedNormal: "images/games/kanto/Red.png" }
-    }
-};
-
-// --- Step 1: Select game ---
-function selectGame(gameKey) {
+function selectGame(game) {
     document.getElementById('game-selection').classList.add('hidden');
     document.getElementById('pokedex-section').classList.remove('hidden');
-    loadDex(gameKey);
+    loadPokedex(game);
 }
 
-// --- Step 2: Load game + dex images ---
-function loadDex(gameKey) {
-    const game = nationalData[gameKey];
-    if (!game) return;
+function loadPokedex(game) {
+    const pokemonGrid = document.getElementById("pokedex");
 
-    const dexImagesContainer = document.getElementById("dex-images");
-    dexImagesContainer.innerHTML = '';
+    // Normalize game key to lowercase (for consistency)
+    const normalizedGame = game.toLowerCase();
+    const pokedex = pokedexData[normalizedGame];
 
-    const dexNames = Object.keys(game.dexes);
-
-    // Only show top-row images if more than 1 dex
-    if (dexNames.length > 1) {
-        dexNames.forEach(dexName => {
-            const img = document.createElement("img");
-            img.src = game.images[dexName];
-            img.alt = dexName;
-            img.className = "dex-selector-image";
-            img.onclick = () => loadDex(gameKey, dexName);
-            dexImagesContainer.appendChild(img);
-        });
+    if (!pokedex) {
+        console.warn("No data found for:", game);
+        pokemonGrid.innerHTML = `<p>No data for ${game}</p>`;
+        return;
     }
 
-    // Default to first dex
-    loadDex(gameKey, dexNames[0]);
-}
-
-// --- Step 3: Load a specific dex ---
-function loadDex(gameKey, dexName) {
-    const game = nationalData[gameKey];
-    if (!game || !game.dexes[dexName]) return;
-
-    const dex = game.dexes[dexName];
-    loadPokemonGrid(gameKey, dexName, dex);
-}
-
-// --- Step 4: Populate Pokémon grid ---
-function loadPokemonGrid(gameKey, dexName, dexData) {
-    const pokemonGrid = document.getElementById("pokedex");
+    // Clear existing grid
     pokemonGrid.innerHTML = '';
 
-    Object.keys(dexData).forEach(id => {
-        const pokemon = dexData[id];
-        if (!pokemon) return;
+    // Loop through Pokémon
+    for (let number in pokedex) {
+        const pokemon = pokedex[number];
+        if (!pokemon) continue;
 
-        const isCaught = localStorage.getItem(`${gameKey}-${dexName}-${id}`) === 'true';
-        const imageSrc = isCaught ? pokemon.image : "images/placeholders/placeholder.png";
+        // Check if caught
+        const isCaught = localStorage.getItem(`${normalizedGame}-${number}`) === 'true';
 
+        // Create Pokémon box
         const pokemonBox = document.createElement("div");
         pokemonBox.className = "pokemon-box";
         pokemonBox.innerHTML = `
-            <div class="pokemon-number">#${id}</div>
-            <div class="pokemon-name">${isCaught ? capitalize(pokemon.name) : '???'}</div>
+            <div class="pokemon-number">#${number}</div>
+            <div class="pokemon-name">${isCaught ? pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1) : '???'}</div>
             <div class="pokemon-status">${isCaught ? 'Caught ✔️' : 'Not Caught ❌'}</div>
-            ${isCaught ? `<div class="pokemon-type">Type: ${pokemon.type}</div>` : ''}
-            <img src="${imageSrc}" alt="${isCaught ? pokemon.name : '???'}" class="pokemon-image"/>
+            ${isCaught 
+                ? `<div class="pokemon-type">Type: ${pokemon.type}</div>` 
+                : ''}
+            <img src="${isCaught ? pokemon.image : 'Placeholder.png'}" alt="${isCaught ? pokemon.name : '???'}" class="pokemon-image"/>
         `;
 
-        pokemonBox.onclick = () => toggleCaughtStatus(gameKey, dexName, id);
+        // Toggle caught status on click
+        pokemonBox.onclick = () => toggleCaughtStatus(normalizedGame, number);
+
+        // Add to grid
         pokemonGrid.appendChild(pokemonBox);
-    });
+    }
 }
 
-// --- Step 5: Toggle caught ---
-function toggleCaughtStatus(gameKey, dexName, id) {
-    const key = `${gameKey}-${dexName}-${id}`;
-    const isCaught = localStorage.getItem(key) === 'true';
-    localStorage.setItem(key, !isCaught);
+function toggleCaughtStatus(game, number) {
+    const isCaught = localStorage.getItem(`${game}-${number}`) === 'true';
+    localStorage.setItem(`${game}-${number}`, !isCaught);
 
-    const game = nationalData[gameKey];
-    const dexData = game.dexes[dexName];
-    loadPokemonGrid(gameKey, dexName, dexData);
+    // Reload grid
+    loadPokedex(game);
 }
 
-// --- Step 6: Back button ---
 function GameSelect() {
     document.getElementById('pokedex-section').classList.add('hidden');
     document.getElementById('game-selection').classList.remove('hidden');
 }
+
+function goBack() {
+    document.getElementById('game-selection').classList.remove('hidden');
+    document.getElementById('dex-buttons').classList.remove('hidden');
+}
+
