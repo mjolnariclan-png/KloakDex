@@ -462,7 +462,7 @@ const pokedexData = {
     151: { name: "mew", type: "Psychic", image:"images/RBY Dex/mew.png" }
         // Add more Pokémon for Red
     },
-    Gold: {
+    gold: {
     1: { name: "Chikorita", type: "Grass", image:"images/GSC Dex/chikorita.png" },
     2: { name: "Bayleef", type: "Grass", image:"images/GSC Dex/bayleef.png" },
     3: { name: "meganium", type: "Grass", image:"images/GSC Dex/meganium.png" },
