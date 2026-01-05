@@ -3472,14 +3472,14 @@ const nationalData = {
 };
 
 // --- Step 1: Select game ---
-function selectNationalGame(gameKey) {
+function selectGame(gameKey) {
     document.getElementById('game-selection').classList.add('hidden');
     document.getElementById('pokedex-section').classList.remove('hidden');
-    loadNationalDex(gameKey);
+    loadDex(gameKey);
 }
 
 // --- Step 2: Load game + dex images ---
-function loadNationalDex(gameKey) {
+function loadDex(gameKey) {
     const game = nationalData[gameKey];
     if (!game) return;
 
@@ -3552,7 +3552,7 @@ function toggleCaughtStatus(gameKey, dexName, id) {
 }
 
 // --- Step 6: Back button ---
-function goBackToGames() {
+function GameSelect() {
     document.getElementById('pokedex-section').classList.add('hidden');
     document.getElementById('game-selection').classList.remove('hidden');
 }
