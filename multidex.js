@@ -831,7 +831,7 @@ const gameData = {
 };
 
 
-function selectRegion(region) {
+function selectmultidex(region) {
     document.getElementById('region-selection').classList.add('hidden');
     loadGames(region);
 }
