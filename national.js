@@ -716,7 +716,7 @@ const pokedexData = {
     251: { name: "Celebi", type: "Psychic/Grass", image:"images/GSC Dex/celebi.png" }
 
 },
-    Silver: {
+    silver: {
     1: { name: "Chikorita", type: "Grass", image:"images/GSC Dex/chikorita.png" },
     2: { name: "Bayleef", type: "Grass", image:"images/GSC Dex/bayleef.png" },
     3: { name: "meganium", type: "Grass", image:"images/GSC Dex/meganium.png" },
@@ -969,7 +969,7 @@ const pokedexData = {
     250: { name: "mew", type: "Psychic", image:"images/GSC Dex/mew.png" },
     251: { name: "Celebi", type: "Psychic/Grass", image:"images/GSC Dex/celebi.png" }
 },
-    Crystal: {
+    crystal: {
     1: { name: "Chikorita", type: "Grass", image:"images/GSC Dex/chikorita.png" },
     2: { name: "Bayleef", type: "Grass", image:"images/GSC Dex/bayleef.png" },
     3: { name: "meganium", type: "Grass", image:"images/GSC Dex/meganium.png" },
@@ -1223,7 +1223,7 @@ const pokedexData = {
     251: { name: "Celebi", type: "Psychic/Grass", image:"images/GSC Dex/celebi.png" }
     },
 
-    Ruby: {
+    ruby: {
     1: { name: "Treecko", type: "Grass", image:"images/RSE Dex/treecko.png" },
     2: { name: "Grovyle", type: "Grass", image:"images/RSE Dex/grovyle.png" },
     3: { name: "Sceptile", type: "Grass", image:"images/RSE Dex/sceptile.png" },
@@ -1428,7 +1428,7 @@ const pokedexData = {
     202: { name: "Deoxys", type: "Psychic", image:"images/RSE Dex/deoxys.png" },
            
 },
-    Sapphire: {
+    sapphire: {
     1: { name: "Treecko", type: "Grass", image:"images/RSE Dex/treecko.png" },
     2: { name: "Grovyle", type: "Grass", image:"images/RSE Dex/grovyle.png" },
     3: { name: "Sceptile", type: "Grass", image:"images/RSE Dex/sceptile.png" },
@@ -1633,7 +1633,7 @@ const pokedexData = {
     202: { name: "Deoxys", type: "Psychic", image:"images/RSE Dex/deoxys.png" },
            
 },
-    Emerald: {
+    emerald: {
     1: { name: "Treecko", type: "Grass", image:"images/RSE Dex/treecko.png" },
     2: { name: "Grovyle", type: "Grass", image:"images/RSE Dex/grovyle.png" },
     3: { name: "Sceptile", type: "Grass", image:"images/RSE Dex/sceptile.png" },
@@ -1838,7 +1838,7 @@ const pokedexData = {
     202: { name: "Deoxys", type: "Psychic", image:"images/RSE Dex/deoxys.png" },
            
 },
-    FireRed: {
+    firered: {
     1: { name: "bulbasaur", type: "Grass/Poison", image:"images/FRLG Dex/bulbasaur.png" },
     2: { name: "ivysaur", type: "Grass/Poison", image:"images/FRLG Dex/ivysaur.png" },
     3: { name: "venusaur", type: "Grass/Poison", image:"images/FRLG Dex/venusaur.png" },
@@ -1992,7 +1992,7 @@ const pokedexData = {
     151: { name: "mew", type: "Psychic", image:"images/FRLG Dex/mew.png" }
         // Add more Pokémon for Red
     },
-    LeafGreen: {
+    leafgreen: {
     1: { name: "bulbasaur", type: "Grass/Poison", image:"images/FRLG Dex/bulbasaur.png" },
     2: { name: "ivysaur", type: "Grass/Poison", image:"images/FRLG Dex/ivysaur.png" },
     3: { name: "venusaur", type: "Grass/Poison", image:"images/FRLG Dex/venusaur.png" },
@@ -2146,7 +2146,7 @@ const pokedexData = {
     151: { name: "mew", type: "Psychic", image:"images/FRLG Dex/mew.png" }
         // Add more Pokémon for Red
     },
-    Diamond:{
+    diamond:{
     1: { name: "Turtwig", type: "Grass", image:"images/DP Dex/turtwig.png" },
     2: { name: "Grotle", type: "Grass", image:"images/DP Dex/grotle.png" },
     3: { name: "Torterra", type: "Grass · Ground", image:"images/DP Dex/torterra.png" },
@@ -2300,7 +2300,7 @@ const pokedexData = {
     151: { name: "manaphy", type: "Water", image:"images/DP Dex/manaphy.png" }
     
   },
-    Pearl:{
+    pearl:{
     1: { name: "Turtwig", type: "Grass", image:"images/DP Dex/turtwig.png" },
     2: { name: "Grotle", type: "Grass", image:"images/DP Dex/grotle.png" },
     3: { name: "Torterra", type: "Grass · Ground", image:"images/DP Dex/torterra.png" },
@@ -2455,7 +2455,7 @@ const pokedexData = {
     
   },
 
-    Platinum:{
+    platinum:{
     1: { name: "Turtwig", type: "Grass", image:"images/DP Dex/turtwig.png" },
     2: { name: "Grotle", type: "Grass", image:"images/DP Dex/grotle.png" },
     3: { name: "Torterra", type: "Grass · Ground", image:"images/DP Dex/torterra.png" },
@@ -2668,7 +2668,7 @@ const pokedexData = {
     210: { name: "Giratina", type: "Ghost · Dragon", image:"images/DP Dex/giratina.png"  }
 },
 
-    HeartGold: {
+    heartgold: {
     1: { name: "Chikorita", type: "Grass", image:"images/HGSS Dex/chikorita.png" },
     2: { name: "Bayleef", type: "Grass", image:"images/HGSS Dex/bayleef.png" },
     3: { name: "meganium", type: "Grass", image:"images/HGSS Dex/meganium.png" },
@@ -2927,7 +2927,7 @@ const pokedexData = {
     256: { name: "Celebi", type: "Psychic/Grass", image:"images/HGSS Dex/celebi.png" }
     },
 
-    SoulSilver: {
+    soulsilver: {
     1: { name: "Chikorita", type: "Grass", image:"images/HGSS Dex/chikorita.png" },
     2: { name: "Bayleef", type: "Grass", image:"images/HGSS Dex/bayleef.png" },
     3: { name: "meganium", type: "Grass", image:"images/HGSS Dex/meganium.png" },
@@ -3186,7 +3186,7 @@ const pokedexData = {
     256: { name: "Celebi", type: "Psychic/Grass", image:"images/HGSS Dex/celebi.png" }
     },
 
-    Scarlet: {
+    scarlet: {
     906: { name: "Sprigatito", type: "Grass", image:"images/Normal/sprigatito.png" },
     907: { name: "Floragato", type: "Grass", image:"images/Normal/floragato.png" },
     908: { name: "meowscarada", type: "Grass · Dark", image:"images/Normal/meowscarada.png" },
@@ -3308,7 +3308,7 @@ const pokedexData = {
     1024: { name: "Terapagos", type: "Normal", image:"images/Normal/terapagos.png" },
     1025: { name: "Pecharunt", type: "Poison · Ghost", image:"images/Normal/pecharunt.png" }
 },
-    Violet: {
+    violet: {
     906: { name: "Sprigatito", type: "Grass", image:"images/Normal/sprigatito.png" },
     907: { name: "Floragato", type: "Grass", image:"images/Normal/floragato.png" },
     908: { name: "meowscarada", type: "Grass · Dark", image:"images/Normal/meowscarada.png" },
