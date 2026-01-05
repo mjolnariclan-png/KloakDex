@@ -1,11 +1,11 @@
 @font-face {
     font-family: 'Pokemon Hollow';
-    src: url('https://file.garden/aS1L6O6dLxrEurHB/Pokedex/Fonts/Pokemon Hollow.ttf') format('truetype');
+    src: url('Fonts/Pokemon Hollow.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'Pokemon Solid';
-    src: url('https://file.garden/aS1L6O6dLxrEurHB/Pokedex/Fonts/Pokemon Solid.ttf') format('truetype');
+    src: url('Fonts/Pokemon Solid.ttf') format('truetype');
 }
 
 
@@ -144,4 +144,5 @@ h2 {
 .hidden {
     display: none;
 }
+
 
