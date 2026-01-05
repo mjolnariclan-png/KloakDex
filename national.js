@@ -3462,7 +3462,7 @@ function loadPokedex(game) {
         pokemonBox.className = "pokemon-box";
         pokemonBox.innerHTML = `
             <div class="pokemon-number">#${number}</div>
-            <div class="pokemon-name">${isCaught ? pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1) : '???'}</div>
+            <div class="pokemon-name">${isCaught ? pokemon.name.charAt(0).toLowerCase() + pokemon.name.slice(1) : '???'}</div>
             ${isCaught ? `<img src="${pokemon.image}" alt="${pokemon.name}"><p class="pokemon-type">${pokemon.type}</p>` : ''}
         `;
 
@@ -3480,7 +3480,7 @@ function toggleDetails(game, number, pokemonBox) {
     if (pokemonBox.querySelector(".pokemon-name").innerText === "???") {
         pokemonBox.innerHTML = `
             <div class="pokemon-number">#${number}</div>
-            <div class="pokemon-name">${pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)}</div>
+            <div class="pokemon-name">${pokemon.name.charAt(0).toLowerCase() + pokemon.name.slice(1)}</div>
             <img src="${pokemon.image}" alt="${pokemon.name}">
             <p>Type: ${pokemon.type}</p>
         `;
