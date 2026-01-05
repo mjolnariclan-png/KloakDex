@@ -3450,7 +3450,7 @@ function loadPokedex(game) {
     if (!pokedex) return;
 
     // Clear existing grid
-    pokemonGrid.innerHTmL = '';
+    pokemonGrid.innerHTML = '';
 
     // Create Pokémon grid
     for (let number in pokedex) {
@@ -3460,7 +3460,7 @@ function loadPokedex(game) {
         // Create Pokémon box with number and caught status
         const pokemonBox = document.createElement("div");
         pokemonBox.className = "pokemon-box";
-        pokemonBox.innerHTmL = `
+        pokemonBox.innerHTML = `
             <div class="pokemon-number">#${number}</div>
             <div class="pokemon-name">${isCaught ? pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1) : '???'}</div>
             ${isCaught ? `<img src="${pokemon.image}" alt="${pokemon.name}"><p class="pokemon-type">${pokemon.type}</p>` : ''}
@@ -3478,7 +3478,7 @@ function toggleDetails(game, number, pokemonBox) {
 
     // Toggle display between "???" and detailed Pokémon info
     if (pokemonBox.querySelector(".pokemon-name").innerText === "???") {
-        pokemonBox.innerHTmL = `
+        pokemonBox.innerHTML = `
             <div class="pokemon-number">#${number}</div>
             <div class="pokemon-name">${pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)}</div>
             <img src="${pokemon.image}" alt="${pokemon.name}">
@@ -3486,7 +3486,7 @@ function toggleDetails(game, number, pokemonBox) {
         `;
     } else {
         // Reset to initial display (number and "???")
-        pokemonBox.innerHTmL = `
+        pokemonBox.innerHTML = `
             <div class="pokemon-number">#${number}</div>
             <div class="pokemon-name">???</div>
         `;
