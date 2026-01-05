@@ -1145,7 +1145,7 @@ function loadPokedexForGame(Generation, pokemonIds, gameId) {
             <div class="pokemon-name">${isCaught ? pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1) : '???'}</div>
             <div class="pokemon-status">${isCaught ? 'Caught ✔️' : 'Not Caught ❌'}</div>
             ${isCaught ? `<div class="pokemon-type">Type: ${pokemon.type}</div>` : ''}
-            <img src="${isCaught ? pokemon.image : 'placeholder.png'}" alt="${isCaught ? pokemon.name : ''}">
+            <img src="${isCaught ? pokemon.image : 'Placeholder.png'}" alt="${isCaught ? pokemon.name : ''}">
         `;
         
         pokemonBox.onclick = () => toggleCaughtStatus(Generation, id, gameId);
