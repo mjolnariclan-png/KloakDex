@@ -157,7 +157,7 @@ const pokedexData = {
     150: { name: "mewtwo", type: "Psychic", image:"images/Normal/Mewtwo.png" },
     151: { name: "mew", type: "Psychic", image:"images/Normal/Mew.png" }
     },
-    jhoto: {
+    johto: {
     152: {name: "Chikorita", type: "Grass", image:"images/Normal/Chikorita.png" },
     153: {name: "Bayleef", type: "Grass", image:"images/Normal/Bayleef.png" },
     154: {name: "Meganium", type: "Grass", image:"images/Normal/Meganium.png" },
