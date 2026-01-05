@@ -1,7 +1,7 @@
 // Pokémon data for each game
 const pokedexData = {
     red: {
-    1: { name: "bulbasaur", type: "Grass/Poison", image:"images/RBY%20Dex/bulbasaur.png" },
+    1: { name: "bulbasaur", type: "Grass/Poison", image:"images/RBY Dex/bulbasaur.png" },
     2: { name: "ivysaur", type: "Grass/Poison", image:"images/RBY Dex/Ivysaur.png" },
     3: { name: "venusaur", type: "Grass/Poison", image:"images/RBY Dex/Venusaur.png" },
     4: { name: "charmander", type: "Fire", image:"images/RBY Dex/Charmander.png" },

@@ -1063,39 +1063,39 @@ const pokedexData = {
 
 const gameData = {
     gen1: [
-        { id: 1, name: "PokéCheck", image:"https://file.garden/aS1L6O6dLxrEurHB/Pokedex/PokéCheck.png",pokemon: generateRange(1, 151) },
+        { id: 1, name: "PokéCheck", image:"PokéCheck.png",pokemon: generateRange(1, 151) },
     ],
 
     gen2: [
-        { id: 1, name: "PokéCheck", image:"https://file.garden/aS1L6O6dLxrEurHB/Pokedex/PokéCheck.png",pokemon: generateRange(152, 251) },
+        { id: 1, name: "PokéCheck", image:"PokéCheck.png",pokemon: generateRange(152, 251) },
     ],
 
     gen3: [
-        { id: 1, name: "PokéCheck", image:"https://file.garden/aS1L6O6dLxrEurHB/Pokedex/PokéCheck.png",pokemon: generateRange(252, 386) },
+        { id: 1, name: "PokéCheck", image:"PokéCheck.png",pokemon: generateRange(252, 386) },
     ],
 
     gen4: [
-        { id: 1, name: "PokéCheck", image:"https://file.garden/aS1L6O6dLxrEurHB/Pokedex/PokéCheck.png", pokemon: generateRange(387, 493) },
+        { id: 1, name: "PokéCheck", image:"PokéCheck.png", pokemon: generateRange(387, 493) },
     ],
 
     gen5: [
-        { id: 1, name: "PokéCheck", image:"https://file.garden/aS1L6O6dLxrEurHB/Pokedex/PokéCheck.png",pokemon: generateRange(494, 649) },
+        { id: 1, name: "PokéCheck", image:"PokéCheck.png",pokemon: generateRange(494, 649) },
     ],
 
     gen6: [
-        { id: 1, name: "PokéCheck", image:"https://file.garden/aS1L6O6dLxrEurHB/Pokedex/PokéCheck.png",pokemon: generateRange(650, 721) },
+        { id: 1, name: "PokéCheck", image:"PokéCheck.png",pokemon: generateRange(650, 721) },
     ],
 
     gen7: [
-        { id: 1, name: "PokéCheck", image:"https://file.garden/aS1L6O6dLxrEurHB/Pokedex/PokéCheck.png",pokemon: generateRange(722, 809) },
+        { id: 1, name: "PokéCheck", image:"PokéCheck.png",pokemon: generateRange(722, 809) },
     ],
 
     gen8: [
-        { id: 1, name: "PokéCheck", image:"https://file.garden/aS1L6O6dLxrEurHB/Pokedex/PokéCheck.png",pokemon: generateRange(810, 905) },
+        { id: 1, name: "PokéCheck", image:"PokéCheck.png",pokemon: generateRange(810, 905) },
     ],
 
     gen9: [
-        { id: 1, name: "PokéCheck", image:"https://file.garden/aS1L6O6dLxrEurHB/Pokedex/PokéCheck.png",pokemon: generateRange(906, 1025) },
+        { id: 1, name: "PokéCheck", image:"PokéCheck.png",pokemon: generateRange(906, 1025) },
     ],
 };
 
@@ -1145,7 +1145,7 @@ function loadPokedexForGame(Generation, pokemonIds, gameId) {
             <div class="pokemon-name">${isCaught ? pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1) : '???'}</div>
             <div class="pokemon-status">${isCaught ? 'Caught ✔️' : 'Not Caught ❌'}</div>
             ${isCaught ? `<div class="pokemon-type">Type: ${pokemon.type}</div>` : ''}
-            <img src="${isCaught ? pokemon.image : 'path/to/placeholder-image.png'}" alt="${isCaught ? pokemon.name : ''}">
+            <img src="${isCaught ? pokemon.image : 'placeholder.png'}" alt="${isCaught ? pokemon.name : ''}">
         `;
         
         pokemonBox.onclick = () => toggleCaughtStatus(Generation, id, gameId);
