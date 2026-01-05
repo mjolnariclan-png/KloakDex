@@ -3445,63 +3445,54 @@ function selectGame(game) {
 
 function loadPokedex(game) {
     const pokemonGrid = document.getElementById("pokedex");
-    const pokedex = pokedexData[game];
 
-    if (!pokedex) return;
+    // Normalize game key to lowercase (for consistency)
+    const normalizedGame = game.toLowerCase();
+    const pokedex = pokedexData[normalizedGame];
+
+    if (!pokedex) {
+        console.warn("No data found for:", game);
+        pokemonGrid.innerHTML = `<p>No data for ${game}</p>`;
+        return;
+    }
 
     // Clear existing grid
     pokemonGrid.innerHTML = '';
 
-    // Create Pokémon grid
+    // Loop through Pokémon
     for (let number in pokedex) {
         const pokemon = pokedex[number];
-        const isCaught = localStorage.getItem(`${game}-${number}`) === 'true';
+        if (!pokemon) continue;
 
-        // Create Pokémon box with number and caught status
+        // Check if caught
+        const isCaught = localStorage.getItem(`${normalizedGame}-${number}`) === 'true';
+
+        // Create Pokémon box
         const pokemonBox = document.createElement("div");
         pokemonBox.className = "pokemon-box";
         pokemonBox.innerHTML = `
             <div class="pokemon-number">#${number}</div>
-            <div class="pokemon-name">${isCaught ? pokemon.name.charAt(0).toLowerCase() + pokemon.name.slice(1) : '???'}</div>
-            ${isCaught ? `<img src="${pokemon.image}" alt="${pokemon.name}"><p class="pokemon-type">${pokemon.type}</p>` : ''}
+            <div class="pokemon-name">${isCaught ? pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1) : '???'}</div>
+            <div class="pokemon-status">${isCaught ? 'Caught ✔️' : 'Not Caught ❌'}</div>
+            ${isCaught 
+                ? `<div class="pokemon-type">Type: ${pokemon.type}</div>` 
+                : ''}
+            <img src="${isCaught ? pokemon.image : 'Placeholder.png'}" alt="${isCaught ? pokemon.name : '???'}" class="pokemon-image"/>
         `;
 
-        // Add onclick event to toggle caught status
-        pokemonBox.onclick = () => toggleCaughtStatus(game, number);
+        // Toggle caught status on click
+        pokemonBox.onclick = () => toggleCaughtStatus(normalizedGame, number);
+
+        // Add to grid
         pokemonGrid.appendChild(pokemonBox);
     }
 }
 
-// Function to toggle Pokémon details within the box
-function toggleDetails(game, number, pokemonBox) {
-    const pokemon = pokedexData[game][number];
-
-    // Toggle display between "???" and detailed Pokémon info
-    if (pokemonBox.querySelector(".pokemon-name").innerText === "???") {
-        pokemonBox.innerHTML = `
-            <div class="pokemon-number">#${number}</div>
-            <div class="pokemon-name">${pokemon.name.charAt(0).toLowerCase() + pokemon.name.slice(1)}</div>
-            <img src="${pokemon.image}" alt="${pokemon.name}">
-            <p>Type: ${pokemon.type}</p>
-        `;
-    } else {
-        // Reset to initial display (number and "???")
-        pokemonBox.innerHTML = `
-            <div class="pokemon-number">#${number}</div>
-            <div class="pokemon-name">???</div>
-        `;
-    }
-}
-
-
-
 function toggleCaughtStatus(game, number) {
     const isCaught = localStorage.getItem(`${game}-${number}`) === 'true';
-
-    // Toggle and save the caught status per game
     localStorage.setItem(`${game}-${number}`, !isCaught);
 
-    // Refresh the Pokédex grid
+    // Reload grid
     loadPokedex(game);
 }
 
@@ -3513,7 +3504,5 @@ function GameSelect() {
 function goBack() {
     document.getElementById('game-selection').classList.remove('hidden');
     document.getElementById('dex-buttons').classList.remove('hidden');
-
 }
-
 
