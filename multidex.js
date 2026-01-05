@@ -792,7 +792,7 @@ const pokedexData = {
 
 
 
-    // Add other regions here
+    // Add other multidexs here
 };
 
 
@@ -828,17 +828,25 @@ const gameData = {
         { id: 5, name: "Pokémon Pearl", image:"images/games/sinnoh/Pearl.png", pokemon: generateRange(387, 493) },
         { id: 6, name: "Pokémon Platinum", image:"images/games/sinnoh/Platinum.png", pokemon: generateRange(387, 493) },
     ],
+    unova: [
+        { id: 1, name: "Pokémon Black", image:"images/games/unova/Black.png",pokemon: generateRange(387, 493) },
+        { id: 2, name: "Pokémon Brilliant Diamond", image:"images/games/sinnoh/BrilliantDiamond.png", pokemon: generateRange(387, 493) },
+        { id: 3, name: "Pokémon Diamond", image:"images/games/sinnoh/Diamond.png", pokemon: generateRange(387, 493) },
+        { id: 4, name: "Pokémon Shining Pearl", image:"images/games/sinnoh/ShiningPearl.png", pokemon: generateRange(387, 493) },
+        { id: 5, name: "Pokémon Pearl", image:"images/games/sinnoh/Pearl.png", pokemon: generateRange(387, 493) },
+        { id: 6, name: "Pokémon Platinum", image:"images/games/sinnoh/Platinum.png", pokemon: generateRange(387, 493) },
+    ]
 };
 
 
-function selectmultidex(region) {
-    document.getElementById('region-selection').classList.add('hidden');
-    loadGames(region);
+function selectmultidex(multidex) {
+    document.getElementById('multidex-selection').classList.add('hidden');
+    loadGames(multidex);
 }
 
-function loadGames(region) {
+function loadGames(multidex) {
     const gamesGrid = document.getElementById("games");
-    const games = gameData[region];
+    const games = gameData[multidex];
 
     if (!games) return;
 
@@ -853,21 +861,21 @@ function loadGames(region) {
             <div class="game-name">${game.name}</div>
             <img src="${game.image}" alt="${game.name}" class="game-image"/>
         `;
-        gameBox.onclick = () => loadPokedexForGame(region, game.pokemon, game.id); // Pass gameId
+        gameBox.onclick = () => loadPokedexForGame(multidex, game.pokemon, game.id); // Pass gameId
         gamesGrid.appendChild(gameBox);
     });
 }
 
 
 // Update loadPokedexForGame to accept gameId parameter
-function loadPokedexForGame(region, pokemonIds, gameId) {
+function loadPokedexForGame(multidex, pokemonIds, gameId) {
     const pokemonGrid = document.getElementById("pokedex");
     pokemonGrid.innerHTML = '';
     document.getElementById('pokedex-section').classList.remove('hidden');
 
     pokemonIds.forEach(id => {
-        const pokemon = pokedexData[region][id];
-        const isCaught = localStorage.getItem(`${region}-${gameId}-${id}`) === 'true';
+        const pokemon = pokedexData[multidex][id];
+        const isCaught = localStorage.getItem(`${multidex}-${gameId}-${id}`) === 'true';
 
         const pokemonBox = document.createElement("div");
         pokemonBox.className = "pokemon-box";
@@ -879,23 +887,23 @@ function loadPokedexForGame(region, pokemonIds, gameId) {
             <img src="${isCaught ? pokemon.image : 'path/to/placeholder-image.png'}" alt="${isCaught ? pokemon.name : ''}">
         `;
         
-        pokemonBox.onclick = () => toggleCaughtStatus(region, id, gameId);
+        pokemonBox.onclick = () => toggleCaughtStatus(multidex, id, gameId);
         pokemonGrid.appendChild(pokemonBox);
     });
 }
 
 // Modify toggleCaughtStatus to use gameId
-function toggleCaughtStatus(region, number, gameId) {
-    const isCaught = localStorage.getItem(`${region}-${gameId}-${number}`) === 'true';
-    localStorage.setItem(`${region}-${gameId}-${number}`, !isCaught);
+function toggleCaughtStatus(multidex, number, gameId) {
+    const isCaught = localStorage.getItem(`${multidex}-${gameId}-${number}`) === 'true';
+    localStorage.setItem(`${multidex}-${gameId}-${number}`, !isCaught);
     
-    loadPokedexForGame(region, Object.keys(pokedexData[region]).map(Number), gameId); // Re-load with gameId
+    loadPokedexForGame(multidex, Object.keys(pokedexData[multidex]).map(Number), gameId); // Re-load with gameId
 }
 
 
 function goBack() {
     document.getElementById('pokedex-section').classList.add('hidden');
     document.getElementById('games-section').classList.add('hidden');
-    document.getElementById('region-selection').classList.remove('hidden');
+    document.getElementById('multidex-selection').classList.remove('hidden');
 }
 
