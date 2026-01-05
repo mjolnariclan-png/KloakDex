@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generational Dex</title>
+    <link rel="stylesheet" href="css/generation.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Generational Dex</h1>
+
+        <div id="Generation-selection">
+            <h2>Select a Generation</h2>
+            <div class="Generation-grid">
+                <div class="Generation" onclick="selectGeneration('gen1')">
+                    <img src="images/Generations/gen1.png" alt="Pokémon gen1">
+                    <p>Pokémon Gen1</p>
+                </div>
+                <div class="Generation" onclick="selectGeneration('gen2')">
+                    <img src="images/Generations/gen2.png" alt="Pokémon gen2">
+                    <p>Pokémon Gen2</p>
+                </div>
+                <div class="Generation" onclick="selectGeneration('gen3')">
+                    <img src="images/Generations/gen3.png" alt="Pokémon gen3">
+                    <p>Pokémon Gen3</p>
+                </div>
+                <div class="Generation" onclick="selectGeneration('gen4')">
+                    <img src="images/Generations/gen4.png" alt="Pokémon gen4">
+                    <p>Pokémon Gen4</p>
+                </div>
+                <div class="Generation" onclick="selectGeneration('gen5')">
+                    <img src="images/Generations/gen5.png" alt="Pokémon gen5">
+                    <p>Pokémon Gen5</p>
+                </div>
+                <div class="Generation" onclick="selectGeneration('gen6')">
+                    <img src="images/Generations/gen6.png" alt="Pokémon gen6">
+                    <p>Pokémon Gen6</p>
+                </div>
+                <div class="Generation" onclick="selectGeneration('gen7')">
+                    <img src="images/Generations/gen7.png" alt="Pokémon gen7">
+                    <p>Pokémon Gen7</p>
+                </div>
+                <div class="Generation" onclick="selectGeneration('gen8')">
+                    <img src="images/Generations/gen8.png" alt="Pokémon gen8">
+                    <p>Pokémon Gen8</p>
+                </div>
+                <div class="Generation" onclick="selectGeneration('gen9')">
+                    <img src="images/Generations/gen9.png" alt="Pokémon gen9">
+                    <p>Pokémon Gen9</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Game selection section -->
+        <div id="games-section" class="hidden">
+            <h2>Select a Game</h2>
+            <div id="games" class="game-grid"></div>
+        </div>
+
+        <div id="pokedex-section" class="hidden">
+            <h2>Pokédex</h2>
+            <div id="pokedex" class="pokemon-grid"></div>
+            <div id="details" class="pokemon-details"></div>
+            <button onclick="goBack()">Back to Generation Selection</button>
+        </div>
+    </div>
+
+    <script src="js/generation.js"></script>
+</body>
+</html>
+
+
