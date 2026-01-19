@@ -1425,8 +1425,7 @@ const pokedexData = {
     199: { name: "Groudon", type: "Ground", image:"images/RSE Dex/groudon.png" },
     200: { name: "Rayquaza", type: "Dragon · Flying", image:"images/RSE Dex/rayquaza.png" },
     201: { name: "jirachi", type: "Steel · Psychic", image:"images/RSE Dex/jirachi.png" },
-    202: { name: "Deoxys", type: "Psychic", image:"images/RSE Dex/deoxys.png" },
-           
+    202: { name: "Deoxys", type: "Psychic", image:"images/RSE Dex/deoxys.png" }
 },
     sapphire: {
     1: { name: "Treecko", type: "Grass", image:"images/RSE Dex/treecko.png" },
