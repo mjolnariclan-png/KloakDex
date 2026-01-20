@@ -3805,9 +3805,9 @@ const pokedexData = {
     298: { name: "keldeo", type: "Water/Fighting", image: "images/B2W2/keldeo.png" },
     299: { name: "meloetta", type: "Normal/Psychic", image: "images/B2W2/meloetta.png" },
     300: { name: "genesect", type: "Bug/Steel", image: "images/B2W2/genesect.png" },
-},
+    },
 
-white2: 
+    white2:{
     0: { name: "victini", type: "Psychic/Fire", image: "images/B2W2/victini.png" },
     1: { name: "snivy", type: "Grass", image: "images/B2W2/snivy.png" },
     2: { name: "servine", type: "Grass", image: "images/B2W2/servine.png" },
