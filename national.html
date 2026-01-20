@@ -7,201 +7,24 @@
     <link rel="stylesheet" href="national.css">
 </head>
 <body>
-    <div class="container">
+    <header>
         <h1>National Dex</h1>
+        <button id="nationalDexBtn">Show National Dex</button>
+    </header>
 
-        <div id="game-selection">
-            <h2>Select a Game
-            </h2>
-            <div class="game-grid">
-                <div class="game" onclick="selectGame('red')">
-                    <img src="images/games/Red.png" alt="Pokémon Red">
-                    <p>Pokémon Red</p>
-                </div>
-                <div class="game" onclick="selectGame('blue')">
-                    <img src="images/games/Blue.png" alt="Pokémon Blue">
-                    <p>Pokémon Blue</p>
-                </div>
-                <div class="game" onclick="selectGame('yellow')">
-                    <img src="images/games/Yellow.png" alt="Pokémon Yellow">
-                    <p>Pokémon Yellow</p>
-                </div>
-                <div class="game" onclick="selectGame('gold')">
-                    <img src="images/games/Gold.png" alt="Pokémon Gold">
-                    <p>Pokémon Gold</p>
-                </div>
-                <div class="game" onclick="selectGame('silver')">
-                    <img src="images/games/Silver.png" alt="Pokémon Silver">
-                    <p>Pokémon Silver</p>
-                </div>
-                <div class="game" onclick="selectGame('crystal')">
-                    <img src="images/games/Crystal.png" alt="Pokémon Crystal">
-                    <p>Pokémon Crystal</p>
-                </div>
-                <div class="game" onclick="selectGame('ruby')">
-                    <img src="images/games/Ruby.png" alt="Pokémon Ruby">
-                    <p>Pokémon Ruby</p>
-                </div>
-                <div class="game" onclick="selectGame('sapphire')">
-                    <img src="images/games/Sapphire.png" alt="Pokémon Sapphire">
-                    <p>Pokémon Sapphire</p>
-                </div>
-                <div class="game" onclick="selectGame('emerald')">
-                    <img src="images/games/Emerald.png" alt="Pokémon Emerald">
-                    <p>Pokémon Emerald</p>
-                </div>
-                <div class="game" onclick="selectGame('firered')">
-                    <img src="images/games/FireRed.png" alt="Pokémon FireRed">
-                    <p>Pokémon Fire Red</p>
-                </div>
-                <div class="game" onclick="selectGame('leafgreen')">
-                    <img src="images/games/LeafGreen.png" alt="Pokémon LeafGreen">
-                    <p>Pokémon Leaf Green</p>
-                </div>
-                <div class="game" onclick="selectGame('diamond')">
-                    <img src="images/games/Diamond.png" alt="Pokémon Diamond">
-                    <p>Pokémon Diamond</p>
-                </div>
-                                <div class="game" onclick="selectGame('pearl')">
-                    <img src="images/games/Pearl.png" alt="Pokémon Pearl">
-                    <p>Pokémon Pearl</p>
-                </div>
-                <div class="game" onclick="selectGame('platinum')">
-                    <img src="images/games/Platinum.png" alt="Pokémon Platinum">
-                    <p>Pokémon Platinum</p>
-                </div>
-                <div class="game" onclick="selectGame('heartgold')">
-                    <img src="images/games/HeartGold.png" alt="Pokémon HeartGold">
-                    <p>Pokémon Heart Gold</p>
-                </div>
-                                <div class="game" onclick="selectGame('soulsilver')">
-                    <img src="images/games/SoulSilver.png" alt="Pokémon SoulSilver">
-                    <p>Pokémon Soul Silver</p>
-                </div>
-                                <div class="game" onclick="selectGame('black')">
-                    <img src="images/games/Black.png" alt="Pokémon Black">
-                    <p>Pokémon Black</p>
-                </div>
-                <div class="game" onclick="selectGame('white')">
-                    <img src="images/games/White.png" alt="Pokémon White">
-                    <p>Pokémon White</p>
-                </div>
-                                <div class="game" onclick="selectGame('black2')">
-                    <img src="images/games/Black2.png" alt="Pokémon Black 2">
-                    <p>Pokémon Black 2</p>
-                </div>
-                <div class="game" onclick="selectGame('white 2')">
-                    <img src="images/games/White2.png" alt="Pokémon White 2">
-                    <p>Pokémon White 2</p>
-                </div>
-                <div class="game" onclick="selectGame('x')">
-                    <img src="images/games/X.png" alt="Pokémon X">
-                    <p>Pokémon X</p>
-                </div>
-                <div class="game" onclick="selectGame('y')">
-                    <img src="images/games/Y.png" alt="Pokémon Y">
-                    <p>Pokémon Y</p>
-                </div>
-                                <div class="game" onclick="selectGame('omegaruby')">
-                    <img src="images/games/OmegaRuby.png" alt="Pokémon OmegaRuby">
-                    <p>Pokémon Omega Ruby</p>
-                </div>
-                <div class="game" onclick="selectGame('alphasapphire')">
-                    <img src="images/games/AlphaSapphire.png" alt="Pokémon AlphaSapphire">
-                    <p>Pokémon Alpha Sapphire</p>
-                </div>
-                <div class="game" onclick="selectGame('pogo')">
-                    <img src="images/games/PoGo.png" alt="Pokémon PoGo">
-                    <p>Pokémon Go</p>
-                </div>
-                <div class="game" onclick="selectGame('sun')">
-                    <img src="images/games/Sun.png" alt="Pokémon Sun">
-                    <p>Pokémon Sun</p>
-                </div>
-                                <div class="game" onclick="selectGame('moon')">
-                    <img src="images/games/Moon.png" alt="Pokémon Moon">
-                    <p>Pokémon Moon</p>
-                </div>
-                <div class="game" onclick="selectGame('ultrasun')">
-                    <img src="images/games/UltraSun.png" alt="Pokémon UltraSun">
-                    <p>Pokémon Ultra Sun</p>
-                </div>
-                <div class="game" onclick="selectGame('ultramoon')">
-                    <img src="images/games/UltraMoon.png" alt="Pokémon UltraMoon">
-                    <p>Pokémon Ultra Moon</p>
-                </div>
-                                <div class="game" onclick="selectGame('letsgoeevee')">
-                    <img src="images/games/LetsGoEevee.png" alt="Pokémon LetsGoEevee">
-                    <p>Pokémon Let's Go Eevee</p>
-                </div>
-                <div class="game" onclick="selectGame('letsgopikachu')">
-                    <img src="images/games/LetsGoPikachu.png" alt="Pokémon LetsGoPikachu">
-                    <p>Pokémon Let's Go Pikachu</p>
-                </div>
-                <div class="game" onclick="selectGame('sword')">
-                    <img src="images/games/Sword.png" alt="Pokémon Sword">
-                    <p>Pokémon Sword</p>
-                </div>
-                                <div class="game" onclick="selectGame('shield')">
-                    <img src="images/games/Shield.png" alt="Pokémon Shield">
-                    <p>Pokémon Shield</p>
-                </div>
-                <div class="game" onclick="selectGame('thecrowntundra')">
-                    <img src="images/games/TheCrownTundra.png" alt="Pokémon TheCrownTundra">
-                    <p>Pokémon The Crown Tundra</p>
-                </div>
-                <div class="game" onclick="selectGame('thessleofarmor')">
-                    <img src="images/games/TheIsleofArmor.png" alt="Pokémon TheIsleofArmor">
-                    <p>Pokémon The Isle of Armor</p>
-                </div>
-                                <div class="game" onclick="selectGame('brilliantdiamond')">
-                    <img src="images/games/BrilliantDiamond.png" alt="Pokémon BrilliantDiamond">
-                    <p>Pokémon Brilliant Diamond</p>
-                </div>
-                <div class="game" onclick="selectGame('shiningpearl')">
-                    <img src="images/games/ShiningPearl.png" alt="Pokémon ShiningPearl">
-                    <p>Pokémon Shining Pearl</p>
-                </div>
-                <div class="game" onclick="selectGame('arceus')">
-                    <img src="images/games/Arceus.png" alt="Pokémon Arceus">
-                    <p>Pokémon Arceus</p>
-                </div>
-                                <div class="game" onclick="selectGame('scarlet')">
-                    <img src="images/games/Scarlet.png" alt="Pokémon Scarlet">
-                    <p>Pokémon Scarlet</p>
-                </div>
-                <div class="game" onclick="selectGame('violet')">
-                    <img src="images/games/Violet.png" alt="Pokémon Violet">
-                    <p>Pokémon Violet</p>
-                </div>
-                <div class="game" onclick="selectGame('thehiddentreasureofareazero')">
-                    <img src="images/games/TheHiddenTreasureofAreaZero.png" alt="Pokémon TheHiddenTreasureofAreaZero">
-                    <p>Pokémon The Hidden Treasure of Area Zero</p>
-                </div>
-                <div class="game" onclick="selectGame('theindigodisk')">
-                    <img src="images/games/TheIndigoDisk.png" alt="Pokémon TheIndigoDisk">
-                    <p>Pokémon The Indigo Disk</p>
-                </div>
-                                <div class="game" onclick="selectGame('az')">
-                    <img src="images/games/AZ.png" alt="Pokémon AZ">
-                    <p>Pokémon Legends: Z-A</p>
-                </div>
-            </div>
-        </div>
-
-        <div id="pokedex-section" class="hidden">
-            <h2>Pokédex</h2>
-            <div id="pokedex" class="pokemon-grid">
-            </div>
-
-            <div id="details" class="pokemon-details"></div>
-
-            <button onclick="GameSelect()">Back to Game Selection</button>
-        </div>
+    <!-- Game selection hidden (optional if you have other games) -->
+    <div id="game-selection">
+        <p>Select a game:</p>
+        <button onclick="showNationalDex()">National Dex</button>
     </div>
 
-    <script src="national.js"></script>
+    <!-- Pokedex Section -->
+    <section id="pokedex-section" class="hidden">
+        <div id="pokedex" class="pokedex-grid"></div>
+        <button onclick="goBack()" class="back-btn">Back</button>
+    </section>
+
+    <!-- JS -->
+    <script src="national.js"></script> <!-- JS from previous message -->
 </body>
 </html>
-
-
