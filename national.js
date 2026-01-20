@@ -3807,7 +3807,7 @@ const pokedexData = {
     300: { name: "genesect", type: "Bug/Steel", image: "images/B2W2/genesect.png" },
     },
 
-    white2:{
+    white2: {
     0: { name: "victini", type: "Psychic/Fire", image: "images/B2W2/victini.png" },
     1: { name: "snivy", type: "Grass", image: "images/B2W2/snivy.png" },
     2: { name: "servine", type: "Grass", image: "images/B2W2/servine.png" },
