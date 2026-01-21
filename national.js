@@ -182,17 +182,12 @@ function capitalize(str) {
     return str.charAt(0).toUpperCase() + str.slice(1);
 }
 
-
-// Called when National Dex button is clicked
-function showNationalDex() {
-    document.getElementById('game-selection').classList.add('hidden');
-    document.getElementById('pokedex-section').classList.remove('hidden');
-
-    loadNationalDex();
-}
-
 // Optional: "Back" button
 function goBack() {
     document.getElementById('pokedex-section').classList.add('hidden');
     document.getElementById('game-selection').classList.remove('hidden');
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+    loadNationalDex();
+});
