@@ -807,7 +807,7 @@ const gameData = {
         { id: 7, name: "Pokémon Lets Go Pikachu", image:"images/games/kanto/LetsGoPikachu.png",pokemon: generateRange(1, 151) },
     ],
     johto: [
-        { id: 1, name: "Pokémon Crystal", image:"images/games/jhoto/crystal.png",pokemon: generateRange(152, 251) },
+        { id: 1, name: "Pokémon Crystal", image:"images/games/jhoto/Crystal.png",pokemon: generateRange(152, 251) },
         { id: 2, name: "Pokémon Gold", image:"images/games/jhoto/Gold.png", pokemon: generateRange(152, 251) },
         { id: 3, name: "Pokémon Heart Gold", image:"images/games/jhoto/HeartGold.png", pokemon: generateRange(152, 251) },
         { id: 4, name: "Pokémon Silver", image:"images/games/jhoto/Silver.png", pokemon: generateRange(152, 251) },
