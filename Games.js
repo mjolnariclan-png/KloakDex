@@ -61,7 +61,7 @@ const pokedexData = {
     0: { name: "victini", type: "Psychic/Fire", image: "images/B2W2/victini.png" },
 },
     x: {
-        fulldex:{
+        base:{
             0: { name: "victini", type: "Psychic/Fire", image: "images/B2W2/victini.png" },
             },
         coastal: {
@@ -75,7 +75,7 @@ const pokedexData = {
         }
 },
     y: {
-        fulldex:{
+        base:{
             0: { name: "victini", type: "Psychic/Fire", image: "images/B2W2/victini.png" },
             },
         coastal: {
@@ -98,7 +98,7 @@ const pokedexData = {
     0: { name: "victini", type: "Psychic/Fire", image: "images/B2W2/victini.png" },
 },
     sun: {
-        full:{
+        base:{
             0: { name: "victini", type: "Psychic/Fire", image: "images/B2W2/victini.png" },
         },
         akala:{
@@ -115,7 +115,7 @@ const pokedexData = {
         }
 },
     moon: {
-        full:{
+        base:{
             0: { name: "victini", type: "Psychic/Fire", image: "images/B2W2/victini.png" },
         },
         akala:{
@@ -132,7 +132,7 @@ const pokedexData = {
         }
 },
     ultrasun: {
-        full:{
+        base:{
             0: { name: "victini", type: "Psychic/Fire", image: "images/B2W2/victini.png" },
         },
         akala:{
@@ -149,7 +149,7 @@ const pokedexData = {
         }
 },
     ultramoon: {
-        full:{
+        base:{
             0: { name: "victini", type: "Psychic/Fire", image: "images/B2W2/victini.png" },
         },
         akala:{
@@ -172,7 +172,7 @@ const pokedexData = {
     0: { name: "victini", type: "Psychic/Fire", image: "images/B2W2/victini.png" },
 },
     sword: {
-        fulldex:{
+        base:{
             0: { name: "victini", type: "Psychic/Fire", image: "images/B2W2/victini.png" },
             },
         isleofarmor: {
@@ -183,7 +183,7 @@ const pokedexData = {
         },
 },
     shield: {
-        fulldex:{
+        base:{
             0: { name: "victini", type: "Psychic/Fire", image: "images/B2W2/victini.png" },
             },
         isleofarmor: {
@@ -203,7 +203,7 @@ const pokedexData = {
     0: { name: "victini", type: "Psychic/Fire", image: "images/B2W2/victini.png" },
 },
     scarlet: {
-        fulldex:{
+        base:{
             0: { name: "victini", type: "Psychic/Fire", image: "images/B2W2/victini.png" },
         },
         kitakami: {
@@ -214,7 +214,7 @@ const pokedexData = {
         }
 },
     violet: {
-        fulldex:{
+        base:{
             0: { name: "victini", type: "Psychic/Fire", image: "images/B2W2/victini.png" },
             },
         kitakami: {
@@ -224,8 +224,8 @@ const pokedexData = {
             0: { name: "victini", type: "Psychic/Fire", image: "images/B2W2/victini.png" },
         },
 },
-    za: {
-        fulldex:{
+    az: {
+        base:{
             0: { name: "victini", type: "Psychic/Fire", image: "images/B2W2/victini.png" },
     
         megadex: {
@@ -252,7 +252,11 @@ function selectGame(game) {
     document.getElementById('pokedex-section').classList.remove('hidden');
 
     setupSubdexBar(currentGame);
-    loadPokedex(currentGame);
+
+    // If no subdex system, load normally
+    if (!pokedexData[currentGame].base) {
+        loadPokedex(currentGame);
+    }
 }
 
 
@@ -262,40 +266,36 @@ function setupSubdexBar(game) {
 
     const gameData = pokedexData[game];
 
-    // If game has nested dexes (like scarlet.fulldex)
-    if (typeof gameData === "object" && !Array.isArray(gameData)) {
-        const subdexKeys = Object.keys(gameData);
+    // Game has subdexes if it contains "base"
+    if (gameData.base) {
+        subdexBar.classList.remove("hidden");
 
-        // If first value is NOT a Pokémon object → it's a subdex structure
-        if (typeof gameData[subdexKeys[0]] === "object" && !gameData[subdexKeys[0]].name) {
-            subdexBar.classList.remove("hidden");
+        Object.keys(gameData).forEach(subdex => {
+            const btn = document.createElement("div");
+            btn.className = "subdex";
+            btn.innerHTML = `
+                <img src="images/dexicons/${subdex}.png">
+                <p>${subdex}</p>
+            `;
 
-            subdexKeys.forEach(subdex => {
-                const btn = document.createElement("div");
-                btn.className = "subdex";
-                btn.innerHTML = `
-                    <img src="images/dexicons/${subdex}.png">
-                    <p>${subdex}</p>
-                `;
+            btn.onclick = () => {
+                currentSubdex = subdex;
+                loadPokedex(game, subdex);
+            };
 
-                btn.onclick = () => {
-                    currentSubdex = subdex;
-                    loadPokedex(game, subdex);
-                };
+            subdexBar.appendChild(btn);
+        });
 
-                subdexBar.appendChild(btn);
-            });
-
-            // Auto-load first subdex
-            currentSubdex = subdexKeys[0];
-            loadPokedex(game, currentSubdex);
-            return;
-        }
+        // Default = base
+        currentSubdex = "base";
+        loadPokedex(game, "base");
+    } 
+    else {
+        // No subdex system
+        subdexBar.classList.add("hidden");
     }
-
-    // No subdexes
-    subdexBar.classList.add("hidden");
 }
+
 
 
 function loadPokedex(game, subdex = null) {
@@ -310,7 +310,9 @@ function loadPokedex(game, subdex = null) {
 
     for (let number in dexData) {
         const pokemon = dexData[number];
-        if (!pokemon) continue;
+
+        // Skip if it's not a Pokémon object
+        if (!pokemon || !pokemon.name) continue;
 
         const key = subdex 
             ? `${game}-${subdex}-${number}`
@@ -335,6 +337,7 @@ function loadPokedex(game, subdex = null) {
         pokemonGrid.appendChild(pokemonBox);
     }
 }
+
 
 function toggleCaughtStatus(game, number) {
     const isCaught = localStorage.getItem(`${game}-${number}`) === 'true';
