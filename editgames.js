@@ -1,3 +1,26 @@
+const subdexIconMap = {
+    base: "base",
+    kitakami: "kitakami",
+    blueberry: "blueberry",
+
+    central: "central",
+    coastal: "coastal",
+    mountain: "mountain",
+
+    akala: "akala island",
+    poni: "poni island",
+    ulaula: "ula ula",
+    melemele: "melemele island",
+
+    isleofarmor: "isle of armor",
+    crowntundra: "crown tundra",
+
+    megadex: "megadex",
+    megadem: "megadem"
+};
+
+
+
 // Pokémon data for each game
 const pokedexData = {
     red: {
@@ -227,7 +250,7 @@ const pokedexData = {
     az: {
         base:{
             0: { name: "victini", type: "Psychic/Fire", image: "images/B2W2/victini.png" },
-    
+        },
         megadex: {
             0: { name: "victini", type: "Psychic/Fire", image: "images/B2W2/victini.png" },
         },
@@ -236,8 +259,6 @@ const pokedexData = {
         },
 }
 
-
-},
 
 }
 
@@ -273,8 +294,12 @@ function setupSubdexBar(game) {
         Object.keys(gameData).forEach(subdex => {
             const btn = document.createElement("div");
             btn.className = "subdex";
+
+            const iconName = subdexIconMap[subdex] || subdex;
+
             btn.innerHTML = `
-                <img src="images/dexicons/${subdex}.png">
+                <img src="images/dexicons/${game}_${iconName}.png"
+                    onerror="this.src='images/dexicons/default.png'">
                 <p>${subdex}</p>
             `;
 
@@ -291,7 +316,6 @@ function setupSubdexBar(game) {
         loadPokedex(game, "base");
     } 
     else {
-        // No subdex system
         subdexBar.classList.add("hidden");
     }
 }
