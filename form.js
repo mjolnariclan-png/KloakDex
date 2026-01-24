@@ -1,67 +1,52 @@
 const pokedexData = {
   kanto: {
-    26: { name: "raichu", type: "Electric", image: "images/kanto/raichu.png" }
+    26: { name: "raichu", type: "Electric", image: "images/Kanto/raichu.png" }
   },
   alola: {
-    26: { name: "raichu", type: "Electric/Psychic", image: "images/alola/raichu.png" }
+    26: { name: "raichu", type: "Electric/Psychic", image: "images/Alola/raichu.png" }
+  },
+  galar: {
+    77: { name: "ponyta", type: "Psychic", image: "images/Galar/ponyta.png" }
   }
 };
-
-
 
 function selectRegion(region) {
     document.getElementById('region-selection').classList.add('hidden');
     document.getElementById('pokedex-section').classList.remove('hidden');
+    document.getElementById("region-title").textContent =
+        region.charAt(0).toUpperCase() + region.slice(1);
+
     loadRegionDex(region);
 }
 
 function loadRegionDex(region) {
     const pokemonGrid = document.getElementById("pokedex");
-    const normalizedRegion = region.toLowerCase();
-    const pokedex = pokedexData[normalizedRegion];
-
-    if (!pokedex) {
-        console.warn("No data found for:", region);
-        pokemonGrid.innerHTML = `<p>No data for ${region}</p>`;
-        return;
-    }
+    const pokedex = pokedexData[region];
 
     pokemonGrid.innerHTML = '';
 
     for (let number in pokedex) {
         const pokemon = pokedex[number];
-        if (!pokemon) continue;
 
-        const storageKey = `${normalizedRegion}-${number}`;
-        const isCaught = localStorage.getItem(storageKey) === 'true';
+        const key = `${region}-${number}`;
+        const isCaught = localStorage.getItem(key) === 'true';
 
         const pokemonBox = document.createElement("div");
         pokemonBox.className = "pokemon-box";
         pokemonBox.innerHTML = `
             <div class="pokemon-number">#${number}</div>
-            <div class="pokemon-name">
-                ${isCaught ? pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1) : '???'}
-            </div>
-            <div class="pokemon-status">
-                ${isCaught ? 'Caught ✔️' : 'Not Caught ❌'}
-            </div>
-            ${isCaught ? `<div class="pokemon-type">Type: ${pokemon.type}</div>` : ''}
-            <img src="${isCaught ? pokemon.image : 'Placeholder.png'}"
-                 alt="${isCaught ? pokemon.name : '???'}"
-                 class="pokemon-image"/>
+            <div class="pokemon-name">${isCaught ? pokemon.name : '???'}</div>
+            <div class="pokemon-status">${isCaught ? 'Caught ✔️' : 'Not Caught ❌'}</div>
+            <img src="${isCaught ? pokemon.image : 'Placeholder.png'}">
         `;
 
-        pokemonBox.onclick = () => toggleCaughtStatus(normalizedRegion, number);
+        pokemonBox.onclick = () => {
+            localStorage.setItem(key, !isCaught);
+            loadRegionDex(region);
+        };
 
         pokemonGrid.appendChild(pokemonBox);
     }
-}
-
-function toggleCaughtStatus(region, number) {
-    const key = `${region}-${number}`;
-    const isCaught = localStorage.getItem(key) === 'true';
-    localStorage.setItem(key, !isCaught);
-    loadRegionDex(region);
 }
 
 function goBack() {
