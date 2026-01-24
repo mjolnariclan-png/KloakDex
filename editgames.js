@@ -61,10 +61,32 @@ const pokedexData = {
     0: { name: "victini", type: "Psychic/Fire", image: "images/B2W2/victini.png" },
 },
     x: {
-    0: { name: "victini", type: "Psychic/Fire", image: "images/B2W2/victini.png" },
+        base:{
+            0: { name: "victini", type: "Psychic/Fire", image: "images/B2W2/victini.png" },
+            },
+        coastal: {
+            0: { name: "victini", type: "Psychic/Fire", image: "images/B2W2/victini.png" },
+        },
+        mountain: {
+            0: { name: "victini", type: "Psychic/Fire", image: "images/B2W2/victini.png" },
+        },
+        central: {
+            0: { name: "victini", type: "Psychic/Fire", image: "images/B2W2/victini.png" },
+        }
 },
     y: {
-    0: { name: "victini", type: "Psychic/Fire", image: "images/B2W2/victini.png" },
+        base:{
+            0: { name: "victini", type: "Psychic/Fire", image: "images/B2W2/victini.png" },
+            },
+        coastal: {
+            0: { name: "victini", type: "Psychic/Fire", image: "images/B2W2/victini.png" },
+        },
+        mountain: {
+            0: { name: "victini", type: "Psychic/Fire", image: "images/B2W2/victini.png" },
+        },
+        central: {
+            0: { name: "victini", type: "Psychic/Fire", image: "images/B2W2/victini.png" },
+        }
 },
     omegaruby: {
     0: { name: "victini", type: "Psychic/Fire", image: "images/B2W2/victini.png" },
@@ -76,16 +98,72 @@ const pokedexData = {
     0: { name: "victini", type: "Psychic/Fire", image: "images/B2W2/victini.png" },
 },
     sun: {
-    0: { name: "victini", type: "Psychic/Fire", image: "images/B2W2/victini.png" },
+        base:{
+            0: { name: "victini", type: "Psychic/Fire", image: "images/B2W2/victini.png" },
+        },
+        akala:{
+            0: { name: "victini", type: "Psychic/Fire", image: "images/B2W2/victini.png" },
+        },
+        poni: {
+            0: { name: "victini", type: "Psychic/Fire", image: "images/B2W2/victini.png" },
+        },
+        ulaula: {
+            0: { name: "victini", type: "Psychic/Fire", image: "images/B2W2/victini.png" },
+        },
+        melemele: {
+            0: { name: "victini", type: "Psychic/Fire", image: "images/B2W2/victini.png" },
+        }
 },
     moon: {
-    0: { name: "victini", type: "Psychic/Fire", image: "images/B2W2/victini.png" },
+        base:{
+            0: { name: "victini", type: "Psychic/Fire", image: "images/B2W2/victini.png" },
+        },
+        akala:{
+            0: { name: "victini", type: "Psychic/Fire", image: "images/B2W2/victini.png" },
+        },
+        poni: {
+            0: { name: "victini", type: "Psychic/Fire", image: "images/B2W2/victini.png" },
+        },
+        ulaula: {
+            0: { name: "victini", type: "Psychic/Fire", image: "images/B2W2/victini.png" },
+        },
+        melemele: {
+            0: { name: "victini", type: "Psychic/Fire", image: "images/B2W2/victini.png" },
+        }
 },
     ultrasun: {
-    0: { name: "victini", type: "Psychic/Fire", image: "images/B2W2/victini.png" },
+        base:{
+            0: { name: "victini", type: "Psychic/Fire", image: "images/B2W2/victini.png" },
+        },
+        akala:{
+            0: { name: "victini", type: "Psychic/Fire", image: "images/B2W2/victini.png" },
+        },
+        poni: {
+            0: { name: "victini", type: "Psychic/Fire", image: "images/B2W2/victini.png" },
+        },
+        ulaula: {
+            0: { name: "victini", type: "Psychic/Fire", image: "images/B2W2/victini.png" },
+        },
+        melemele: {
+            0: { name: "victini", type: "Psychic/Fire", image: "images/B2W2/victini.png" },
+        }
 },
     ultramoon: {
-    0: { name: "victini", type: "Psychic/Fire", image: "images/B2W2/victini.png" },
+        base:{
+            0: { name: "victini", type: "Psychic/Fire", image: "images/B2W2/victini.png" },
+        },
+        akala:{
+            0: { name: "victini", type: "Psychic/Fire", image: "images/B2W2/victini.png" },
+        },
+        poni: {
+            0: { name: "victini", type: "Psychic/Fire", image: "images/B2W2/victini.png" },
+        },
+        ulaula: {
+            0: { name: "victini", type: "Psychic/Fire", image: "images/B2W2/victini.png" },
+        },
+        melemele: {
+            0: { name: "victini", type: "Psychic/Fire", image: "images/B2W2/victini.png" },
+        }
 },
     letsgopikachu: {
     0: { name: "victini", type: "Psychic/Fire", image: "images/B2W2/victini.png" },
@@ -94,10 +172,26 @@ const pokedexData = {
     0: { name: "victini", type: "Psychic/Fire", image: "images/B2W2/victini.png" },
 },
     sword: {
-    0: { name: "victini", type: "Psychic/Fire", image: "images/B2W2/victini.png" },
+        base:{
+            0: { name: "victini", type: "Psychic/Fire", image: "images/B2W2/victini.png" },
+            },
+        isleofarmor: {
+            0: { name: "victini", type: "Psychic/Fire", image: "images/B2W2/victini.png" },
+        },
+        crowntundra: {
+            0: { name: "victini", type: "Psychic/Fire", image: "images/B2W2/victini.png" },
+        },
 },
     shield: {
-    0: { name: "victini", type: "Psychic/Fire", image: "images/B2W2/victini.png" },
+        base:{
+            0: { name: "victini", type: "Psychic/Fire", image: "images/B2W2/victini.png" },
+            },
+        isleofarmor: {
+            0: { name: "victini", type: "Psychic/Fire", image: "images/B2W2/victini.png" },
+        },
+        crowntundra: {
+            0: { name: "victini", type: "Psychic/Fire", image: "images/B2W2/victini.png" },
+        },
 },
     brilliantdiamond: {
     0: { name: "victini", type: "Psychic/Fire", image: "images/B2W2/victini.png" },
@@ -109,71 +203,141 @@ const pokedexData = {
     0: { name: "victini", type: "Psychic/Fire", image: "images/B2W2/victini.png" },
 },
     scarlet: {
-    906: { name: "Sprigatito", type: "Grass", image:"images/Normal/sprigatito.png" },
+        base:{
+            0: { name: "victini", type: "Psychic/Fire", image: "images/B2W2/victini.png" },
+        },
+        kitakami: {
+            0: { name: "victini", type: "Psychic/Fire", image: "images/B2W2/victini.png" },
+        },
+        blueberry: {
+            0: { name: "victini", type: "Psychic/Fire", image: "images/B2W2/victini.png" },
+        }
 },
     violet: {
-    906: { name: "Sprigatito", type: "Grass", image:"images/Normal/sprigatito.png" },
+        base:{
+            0: { name: "victini", type: "Psychic/Fire", image: "images/B2W2/victini.png" },
+            },
+        kitakami: {
+            0: { name: "victini", type: "Psychic/Fire", image: "images/B2W2/victini.png" },
+        },
+        blueberry: {
+            0: { name: "victini", type: "Psychic/Fire", image: "images/B2W2/victini.png" },
+        },
 },
-    za: {
-    0: { name: "victini", type: "Psychic/Fire", image: "images/B2W2/victini.png" },
-},
-
-
-
-
-    // Add other games here
-};
-
-function selectGame(game) {
-    document.getElementById('game-selection').classList.add('hidden');
-    document.getElementById('pokedex-section').classList.remove('hidden');
-    loadPokedex(game);
+    az: {
+        base:{
+            0: { name: "victini", type: "Psychic/Fire", image: "images/B2W2/victini.png" },
+    
+        megadex: {
+            0: { name: "victini", type: "Psychic/Fire", image: "images/B2W2/victini.png" },
+        },
+        megadem: {
+            0: { name: "victini", type: "Psychic/Fire", image: "images/B2W2/victini.png" },
+        },
 }
 
-function loadPokedex(game) {
-    const pokemonGrid = document.getElementById("pokedex");
 
-    // Normalize game key to lowercase (for consistency)
-    const normalizedGame = game.toLowerCase();
-    const pokedex = pokedexData[normalizedGame];
+},
 
-    if (!pokedex) {
-        console.warn("No data found for:", game);
-        pokemonGrid.innerHTML = `<p>No data for ${game}</p>`;
-        return;
+}
+
+let currentGame = null
+let currentSubdex = null
+
+function selectGame(game) {
+    currentGame = game.toLowerCase();
+    currentSubdex = null;
+
+    document.getElementById('game-selection').classList.add('hidden');
+    document.getElementById('pokedex-section').classList.remove('hidden');
+
+    setupSubdexBar(currentGame);
+
+    // If no subdex system, load normally
+    if (!pokedexData[currentGame].base) {
+        loadPokedex(currentGame);
     }
+}
 
-    // Clear existing grid
+
+function setupSubdexBar(game) {
+    const subdexBar = document.getElementById("subdex-bar");
+    subdexBar.innerHTML = '';
+
+    const gameData = pokedexData[game];
+
+    // Game has subdexes if it contains "base"
+    if (gameData.base) {
+        subdexBar.classList.remove("hidden");
+
+        Object.keys(gameData).forEach(subdex => {
+            const btn = document.createElement("div");
+            btn.className = "subdex";
+            btn.innerHTML = `
+                <img src="images/dexicons/${subdex}.png">
+                <p>${subdex}</p>
+            `;
+
+            btn.onclick = () => {
+                currentSubdex = subdex;
+                loadPokedex(game, subdex);
+            };
+
+            subdexBar.appendChild(btn);
+        });
+
+        // Default = base
+        currentSubdex = "base";
+        loadPokedex(game, "base");
+    } 
+    else {
+        // No subdex system
+        subdexBar.classList.add("hidden");
+    }
+}
+
+
+
+function loadPokedex(game, subdex = null) {
+    const pokemonGrid = document.getElementById("pokedex");
     pokemonGrid.innerHTML = '';
 
-    // Loop through Pokémon
-    for (let number in pokedex) {
-        const pokemon = pokedex[number];
-        if (!pokemon) continue;
+    let dexData = pokedexData[game];
 
-        // Check if caught
-        const isCaught = localStorage.getItem(`${normalizedGame}-${number}`) === 'true';
+    if (subdex && dexData[subdex]) {
+        dexData = dexData[subdex];
+    }
 
-        // Create Pokémon box
+    for (let number in dexData) {
+        const pokemon = dexData[number];
+
+        // Skip if it's not a Pokémon object
+        if (!pokemon || !pokemon.name) continue;
+
+        const key = subdex 
+            ? `${game}-${subdex}-${number}`
+            : `${game}-${number}`;
+
+        const isCaught = localStorage.getItem(key) === 'true';
+
         const pokemonBox = document.createElement("div");
         pokemonBox.className = "pokemon-box";
         pokemonBox.innerHTML = `
             <div class="pokemon-number">#${number}</div>
-            <div class="pokemon-name">${isCaught ? pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1) : '???'}</div>
+            <div class="pokemon-name">${isCaught ? pokemon.name : '???'}</div>
             <div class="pokemon-status">${isCaught ? 'Caught ✔️' : 'Not Caught ❌'}</div>
-            ${isCaught 
-                ? `<div class="pokemon-type">Type: ${pokemon.type}</div>` 
-                : ''}
-            <img src="${isCaught ? pokemon.image : 'Placeholder.png'}" alt="${isCaught ? pokemon.name : '???'}" class="pokemon-image"/>
+            <img src="${isCaught ? pokemon.image : 'Placeholder.png'}">
         `;
 
-        // Toggle caught status on click
-        pokemonBox.onclick = () => toggleCaughtStatus(normalizedGame, number);
+        pokemonBox.onclick = () => {
+            localStorage.setItem(key, !isCaught);
+            loadPokedex(game, subdex);
+        };
 
-        // Add to grid
         pokemonGrid.appendChild(pokemonBox);
     }
 }
+
 
 function toggleCaughtStatus(game, number) {
     const isCaught = localStorage.getItem(`${game}-${number}`) === 'true';
