@@ -4515,7 +4515,7 @@ const pokedexData = {
     az: {
         base:{
             0: { name: "victini", type: "Psychic/Fire", image: "images/B2W2/victini.png" },
-    
+        },
         megadex: {
             0: { name: "victini", type: "Psychic/Fire", image: "images/B2W2/victini.png" },
         },
@@ -4523,9 +4523,6 @@ const pokedexData = {
             0: { name: "victini", type: "Psychic/Fire", image: "images/B2W2/victini.png" },
         },
 }
-
-
-},
 
 }
 
@@ -4562,7 +4559,7 @@ function setupSubdexBar(game) {
             const btn = document.createElement("div");
             btn.className = "subdex";
             btn.innerHTML = `
-                <img src="images/dexicons/${subdex}.png">
+                <img src="images/dexicons/${game}_${subdex}.png">
                 <p>${subdex}</p>
             `;
 
