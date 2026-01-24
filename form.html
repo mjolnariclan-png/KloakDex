@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Regional Pokédex</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="form.css">
+
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Regional Pokédex</h1>
+    <h2>Select a Region</h2>
+
+    <!-- REGION SELECTION -->
+    <div id="region-selection" class="region-selection">
+        <div class="region-grid">
+
+            <div class="region" onclick="selectRegion('kanto')">
+                <img src="regions/kanto.png">
+                <div>Kanto</div>
+            </div>
+
+            <div class="region" onclick="selectRegion('alola')">
+                <img src="regions/alola.png">
+                <div>Alola</div>
+            </div>
+
+            <div class="region" onclick="selectRegion('galar')">
+                <img src="regions/galar.png">
+                <div>Galar</div>
+            </div>
+
+            <div class="region" onclick="selectRegion('hisui')">
+                <img src="regions/hisui.png">
+                <div>Hisui</div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- POKEDEX SECTION -->
+    <section id="pokedex-section" class="hidden">
+
+        <h2 id="region-title"></h2>
+
+        <div id="pokedex" class="pokemon-grid"></div>
+
+        <button onclick="goBack()">Back</button>
+    </section>
+
+</div>
+
+<!-- DATA FILE -->
+<script src="form.js"></script>
+
+
+</body>
+</html>
