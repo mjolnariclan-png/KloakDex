@@ -108,9 +108,9 @@ const pokedexData = {
     904: { name: "overqwil", type: "Dark/Poison", image: "images/Hisui/overqwil.png"},
   },
   paldea: {
-    128: { name: "tauros-aqua", type: "Fighting/Water", image: "images/Paldea/tauros-aqua.png"},
-    128: { name: "tauros-blaze", type: "Fighting/Fire", image: "images/Paldea/tauros-blaze.png"},
-    128: { name: "tauros-combat", type: "Fighting", image: "images/Paldea/tauros-combat.png"},
+    1281: { name: "tauros-aqua", type: "Fighting/Water", image: "images/Paldea/tauros-aqua.png"},
+    1282: { name: "tauros-blaze", type: "Fighting/Fire", image: "images/Paldea/tauros-blaze.png"},
+    1283: { name: "tauros-combat", type: "Fighting", image: "images/Paldea/tauros-combat.png"},
     194: { name: "wooper", type: "Poison/Ground", image: "images/Paldea/wooper.png"},
     980: { name: "clodsire", type: "Poison/Ground", image: "images/Paldea/clodsire.png"},
   },
