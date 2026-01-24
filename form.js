@@ -6,7 +6,7 @@ const pokedexData = {
     27: { name: "sandshrew", type: "Ice/Steel", image: "images/Kanto/sandshrew.png"},
     28: { name: "sandslash", type: "Ice/Steel", image: "images/Kanto/sandslash.png"},
     37: { name: "vulpix", type: "Fire", image: "images/Kanto/vulpix.png"},
-    38: { name: "ninetales", type: "Fire", image: "images/Kanto/ninetales.png"},
+    38: { name: "ninetails", type: "Fire", image: "images/Kanto/ninetails.png"},
     50: { name: "diglett", type: "Ground", image: "images/Kanto/diglett.png"},
     51: { name: "dugtrio", type: "Ground", image: "images/Kanto/dugtrio.png"},
     52: { name: "meowth", type: "Normal", image: "images/Kanto/meowth.png"},
