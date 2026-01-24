@@ -47,8 +47,6 @@ h2 {
 
 .region {
     cursor: url('cursor.png'), auto;
-    border: 3px solid red;
-    padding: 10px;
 }
 
 .region img {
