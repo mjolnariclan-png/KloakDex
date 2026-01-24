@@ -152,10 +152,15 @@ const pokedexData = {
 };
 
 function selectRegion(region) {
-    document.getElementById('region-selection').classList.add('hidden');
+    document.getElementById("select-title").classList.add("hidden");
+    document.getElementById('region-selection').classList.add('top-bar');
     document.getElementById('pokedex-section').classList.remove('hidden');
+
     document.getElementById("region-title").textContent =
         region.charAt(0).toUpperCase() + region.slice(1);
+
+    document.querySelectorAll(".region").forEach(r => r.classList.remove("selected"));
+    document.querySelector(`.region[onclick="selectRegion('${region}')"]`).classList.add("selected");
 
     loadRegionDex(region);
 }
@@ -192,5 +197,7 @@ function loadRegionDex(region) {
 
 function goBack() {
     document.getElementById('pokedex-section').classList.add('hidden');
-    document.getElementById('region-selection').classList.remove('hidden');
+    document.getElementById('region-selection').classList.remove('top-bar');
+    document.getElementById("select-title").classList.remove("hidden");
+
 }

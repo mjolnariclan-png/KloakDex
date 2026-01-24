@@ -36,6 +36,12 @@ h2 {
     margin-top: 30px;
 }
 
+.region.selected img {
+    width: 150px;
+    height: 150px;
+}
+
+
 .region-grid {
     font-family: 'Pokemon Hollow';
     color: #f3c877;
@@ -124,6 +130,21 @@ h2 {
     position: relative;
     padding: 10px;
     box-shadow: none
+}
+
+.top-bar .region-grid {
+    grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.top-bar .region img {
+    width: 60px;
+    height: 60px;
+}
+
+.top-bar .region div {
+    font-size: 0.6em;
 }
 
 
