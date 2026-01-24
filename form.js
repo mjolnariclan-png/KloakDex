@@ -121,7 +121,7 @@ const pokedexData = {
     199: { name: "slowking", type: "Water/Psychic", image: "images/Johto/slowking.png"},
     211: { name: "qwilfish", type: "Water/Poison", image: "images/Johto/qwilfish.png"},
     215: { name: "sneasel", type: "Dark/Ice", image: "images/Johto/sneasel.png"},
-    222: { name: "corsola", type: "Water/Rock", image: "images/Jotho/corsola.png"},
+    222: { name: "corsola", type: "Water/Rock", image: "images/Johto/corsola.png"},
   },
   hoenn: {
     263: { name: "zigzagoon", type: "Normal", image: "images/Hoenn/zigzagoon.png"},
