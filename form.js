@@ -7,6 +7,10 @@ const pokedexData = {
   },
   galar: {
     77: { name: "ponyta", type: "Psychic", image: "images/Galar/ponyta.png" }
+  },
+  hisui: {
+    58: { name: "growlithe", type: "Fire/Rock", image: "images/Hisui/growlithe.png"},
+    59: { name: "arcanine", type: "Fire/Rock", image: "images/Hisui/arcanine.png" }
   }
 };
 
