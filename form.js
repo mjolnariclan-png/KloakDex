@@ -1,6 +1,7 @@
 const pokedexData = {
   kanto: {
-    26: { name: "raichu", type: "Electric", image: "images/Kanto/raichu.png" }
+    26: { name: "raichu", type: "Electric", image: "images/Kanto/raichu.png" },
+    77: { name: "ponyta", type: "Fire", image: "images/Kanto/ponyta.png"}
   },
   alola: {
     26: { name: "raichu", type: "Electric/Psychic", image: "images/Alola/raichu.png" }
