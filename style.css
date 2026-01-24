@@ -8,6 +8,16 @@
     src: url('Fonts/Pokemon Solid.ttf') format('truetype');
 }
 
+@font-face {
+    font-family: 'Pokemon Classic';
+    src: url('Fonts/Pokemon Classic.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Ketchum';
+    src: url('Fonts/Ketchum.ttf') format('truetype');
+}
+
 body {
     cursor: url('cursor.png'), auto;
     font-family: 'Pokemon Solid', Arial, sans-serif;
@@ -25,8 +35,8 @@ body {
 }
 
 h1 {
-    font-family: 'Pokemon Hollow', Arial, sans-serif;
-    color: #1d2c5e;
+    font-family: 'Ketchum', Arial, sans-serif;
+    color: #152629;
     font-size: 50px;
 }
 
@@ -38,10 +48,10 @@ h1 {
 }
 
 button {
-    font-family: 'Pokemon Hollow', Arial, sans-serif;
+    font-family: 'Ketchum', Arial, sans-serif;
     color:#0075BE;
     padding: 5px;
-    font-size: 20px;
+    font-size: 30px;
     background-color: #eeff00;
     border: none;
     border-radius: 5px;
@@ -50,7 +60,7 @@ button {
 }
 
 button:hover {
-    font-family: 'Pokemon Solid', Arial, sans-serif;
+    font-family: 'Pokemon Classic';
     color:#000000;
     background-color: #de5138;
 }
