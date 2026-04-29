@@ -16,9 +16,8 @@ body {
 }
 
 .container {
-    margin-top: 50px;
-    font-family: "Pokemon Hollow";
-    color: rgb(255, 241, 241);
+    margin-left: 220px; /* space for sidebar */
+    margin-top: 40px;
 }
 
 h1 {
@@ -148,4 +147,36 @@ h2 {
 
 .hidden {
     display: none;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 100vh;
+    background-color: #2bff00;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 15px;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: #ffd166;
+    font-family: 'Pokemon Solid';
+}
+
+.sidebar a:hover {
+    color: #ff9441;
+}
+
+.logo {
+    color: #ff9441;
+    font-family: 'Pokemon Hollow';
+}
+.sidebar a.active {
+    color: #ff9441;
+    font-weight: bold;
 }

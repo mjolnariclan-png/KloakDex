@@ -5579,3 +5579,8 @@ function goBack() {
     document.getElementById('dex-buttons').classList.remove('hidden');
 }
 
+fetch('sidebar.html')
+    .then(response => response.text())
+    .then(data => {
+        document.getElementById('sidebar-container').innerHTML = data;
+    });
