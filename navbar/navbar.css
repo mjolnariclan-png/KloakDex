@@ -68,6 +68,12 @@
     }
 }
 
+@media (max-width: 768px) {
+    body {
+        padding-top: 60px; /* 50px + 10px */
+    }
+}
+
 /* Scroll hint - small indicator that navbar is hidden */
 .scroll-hint {
     position: fixed;
@@ -90,4 +96,17 @@
 
 .scroll-hint:hover {
     height: 10px;
+}
+
+:root {
+    --navbar-height: 60px;
+}
+
+body {
+    padding-top: calc(var(--navbar-height) + 10px);
+}
+
+/* Then update your navbar height to use the variable too */
+.navbar {
+    height: var(--navbar-height);
 }
